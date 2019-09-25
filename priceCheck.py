@@ -39,7 +39,7 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login('test.python.72@gmail.com', 'zklxtkpbbpqmjopn')
+    server.login('*******@gmail.com', '******')
 
     subject = 'Price fell down!'
 
@@ -48,8 +48,8 @@ def send_mail():
     message = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-        'test.python.72@gmail.com',
-        'tfftejas@gmail.com',
+        '<sender>@gmail.com',
+        '<receiver>@gmail.com',
         message
     )
 
